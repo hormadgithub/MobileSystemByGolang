@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ClearDocumentError">
+
+    <TextView
+        android:id="@+id/tvTitleClearDocumentError"
+        style="@style/style_title_top"
+        android:layout_width="0dp"
+
+        android:text="Clear Document Error."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        style="@style/style_imgBackTop"
+        android:id="@+id/imgBackTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="visible"
+
+        app:layout_constraintStart_toStartOf="@id/tvTitleClearDocumentError"
+        app:layout_constraintTop_toTopOf="@id/tvTitleClearDocumentError">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirmClearDocno"
+            style="@style/style_button_blue"
+            android:layout_width="119dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSelectDocnoError" />
+
+        <EditText
+            android:id="@+id/etSelectDocnoError"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:hint="Docno"
+            app:layout_constraintEnd_toEndOf="@+id/etScanDocumentError"
+            app:layout_constraintStart_toStartOf="@+id/lblScanDocumentError"
+            app:layout_constraintTop_toBottomOf="@+id/etScanDocumentError" />
+
+        <TextView
+            android:id="@+id/lblScanDocumentError"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Scan Document :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chkPartnotfinish" />
+
+        <EditText
+            android:id="@+id/etScanDocumentError"
+            style="@style/style_text_default"
+            android:layout_width="0dp"
+
+            android:layout_height="33dp"
+            android:hint="Document"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanDocumentError"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanDocumentError" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="292dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_listview_state"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbtnPicking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="จัดสินค้า" />
+
+            <RadioButton
+                android:id="@+id/rbtnReceive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="รับสินค้า" />
+
+            <RadioButton
+                android:id="@+id/rbtnStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เก็บสินค้าขึ้นชั้น" />
+            android:text="RadioButton" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/chkPartnotfinish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="เฉพาะ Part ที่ยังไม่เสร็จ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

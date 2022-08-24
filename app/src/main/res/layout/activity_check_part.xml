@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CheckPartActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/style_title_top"
+        android:layout_width="0dp"
+
+        android:text="เช็ครายละเอียดสินค้า"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        style="@style/style_imgBackTop"
+        android:id="@+id/imgBackTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle">
+
+
+        <EditText
+            android:id="@+id/etShowLocationWH2"
+            style="@style/style_text_disable_default"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="15dp"
+            android:hint="WH"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etShowLocation2" />
+
+        <EditText
+            android:id="@+id/etShowLocationWH"
+            style="@style/style_text_disable_default"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:hint="WH"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid12"
+            app:layout_constraintEnd_toStartOf="@+id/etShowLocation2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etShowLocation" />
+
+        <EditText
+            android:id="@+id/etShowLocation2"
+            style="@style/style_text_disable_default"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:hint="Location"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid12"
+            app:layout_constraintEnd_toStartOf="@+id/etShowLocationWH2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etShowLocationWH" />
+
+        <EditText
+            android:id="@+id/etShowDamageLength"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:hint="Digitno"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid6" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid6"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Damage length :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblScanPartnid5" />
+
+        <EditText
+            android:id="@+id/etShowFullLength"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:hint="Full Length"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid5" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid5"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Full Length :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblScanPartnid13" />
+
+        <EditText
+            android:id="@+id/etShowStatus"
+            style="@style/style_text_disable_default"
+            android:layout_width="0dp"
+            android:hint="Status"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid4" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid4"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:text="Status:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblScanPartnid3" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid3"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warehouse:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/etShowWarehouse"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etShowDigitno"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            android:hint="Digitno"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid13" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid13"
+            style="@style/style_label_default"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="12dp"
+            android:text="Digitno:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblScanPartnid4" />
+
+        <EditText
+            android:id="@+id/etShowWarehouse"
+            style="@style/style_text_disable_default"
+
+            android:layout_marginTop="10dp"
+            android:hint="Warehouse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid3"
+            app:layout_constraintTop_toBottomOf="@+id/etShowLocation" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid12"
+            style="@style/style_label_default"
+            android:layout_marginTop="12dp"
+            android:text="Location:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblScanPartnid11" />
+
+        <EditText
+            android:id="@+id/etShowLocation"
+            style="@style/style_text_disable_default"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="5dp"
+            android:hint="Location"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid12"
+            app:layout_constraintEnd_toStartOf="@+id/etShowLocationWH"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid12" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid11"
+            style="@style/style_label_default"
+            android:text="Pack:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/etShowPackqty"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etShowPackqty"
+            style="@style/style_text_disable_default"
+
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:hint="Pack qty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid11"
+            app:layout_constraintTop_toBottomOf="@+id/etShowPartDesc" />
+
+        <EditText
+            android:id="@+id/etShowPartDesc"
+            style="@style/style_text_disable_default"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:hint="Part description"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid10"
+            app:layout_constraintTop_toBottomOf="@+id/etShowPartno" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid10"
+            style="@style/style_label_default"
+            android:text="Desc:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/etShowPartDesc"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid9"
+            style="@style/style_label_default"
+            android:text="Partno:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/etShowPartno"
+            app:layout_constraintEnd_toStartOf="@+id/etShowPartno"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etShowPartnid"
+            style="@style/style_text_disable_default"
+            android:layout_marginStart="14dp"
+
+            android:layout_marginTop="10dp"
+            android:hint="partnid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid2"
+            app:layout_constraintTop_toBottomOf="@+id/etScanPartnid" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid2"
+            style="@style/style_label_default"
+            android:text="Partid:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/etShowPartnid"
+            app:layout_constraintEnd_toStartOf="@+id/etShowPartno"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etShowPartno"
+            style="@style/style_text_disable_default"
+            android:layout_marginTop="10dp"
+
+            android:hint="Partno"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid9"
+            app:layout_constraintTop_toBottomOf="@+id/etShowPartnid" />
+
+
+        <EditText
+            android:id="@+id/etScanPartnid"
+            style="@style/style_text_default"
+            android:layout_marginStart="20dp"
+
+            android:hint="Scan Part"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanPartnid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toEndOf="@+id/lblScanPartnid" />
+
+        <TextView
+            android:id="@+id/lblScanPartnid"
+            style="@style/style_label_default"
+            android:layout_marginTop="40dp"
+            android:text="Scan :"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.026"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

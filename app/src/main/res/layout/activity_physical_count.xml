@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PhysicalCountActivity">
+
+    <TextView
+        android:id="@+id/tvTitlePhysicalcount"
+        style="@style/style_title_top"
+        android:layout_width="0dp"
+
+        android:text="ตรวจนับสินค้า"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        style="@style/style_imgBackTop"
+        android:id="@+id/imgBackTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="visible"
+
+        app:layout_constraintStart_toStartOf="@id/tvTitlePhysicalcount"
+        app:layout_constraintTop_toTopOf="@id/tvTitlePhysicalcount">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHold_Part"
+            style="@style/style_button_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/hold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etScanLocation"
+            style="@style/style_text_default"
+            android:layout_width="0dp"
+
+            android:nextFocusDown='@id/etScanCountPartnid'
+
+            android:layout_height="28dp"
+            android:layout_marginStart="4dp"
+            android:hint="Location"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtLocation" />
+
+        <TextView
+            android:id="@+id/txtGenno"
+            style="@style/style_title_middle"
+            android:layout_marginTop="40dp"
+            android:gravity="left"
+            android:text="Select Gen No."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnGenno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtGenno"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <TextView
+            android:id="@+id/txtWeekno"
+            style="@style/style_title_middle"
+            android:gravity="left"
+            android:text="Select Week No."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnGenno" />
+
+        <Spinner
+            android:id="@+id/spnWeekno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeekno"
+            tools:layout_editor_absoluteX="-16dp" />
+
+
+        <TextView
+            android:id="@+id/txtIssuePeriod"
+            style="@style/style_title_middle"
+            android:gravity="left"
+            android:text="Select Issue Period."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnWeekno" />
+
+        <Spinner
+            android:id="@+id/spnIssuePeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtIssuePeriod"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            style="@style/style_title_middle"
+            android:layout_width="197dp"
+            android:layout_height="31dp"
+            android:gravity="left"
+            android:text="Scan Location."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnIssuePeriod" />
+
+        <Spinner
+            android:id="@+id/spnLocation"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/etScanLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
+
+
+        <TextView
+            android:id="@+id/txtListPart"
+            style="@style/style_title_middle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:text="Select Part"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ListView
+            android:id="@+id/lvPartnid"
+            android:layout_width="302dp"
+            android:layout_height="305dp"
+            android:divider="@color/blue_200"
+            android:dividerHeight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtListPart">
+
+        </ListView>
+
+
+        <EditText
+            android:id="@+id/etScanCountPartnid"
+            style="@style/style_text_default"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:hint="Scan Partid"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtScanCountPartNid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtScanCountPartNid" />
+
+
+        <TextView
+            android:id="@+id/txtScanCountPartNid"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Scan Count:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowWHCode" />
+
+        <TextView
+            android:id="@+id/lblShowPartnid"
+            style="@style/style_label_default"
+
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="30dp"
+            android:text="Partnid:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtShowPartnid"
+            style="@style/style_label_default"
+            android:layout_marginStart="10dp"
+            android:hint="Partnid"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowPartnid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblShowPartnid" />
+
+        <TextView
+            android:id="@+id/lblShowPartNo"
+            style="@style/style_label_default"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:text="PartNo:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowPartnid" />
+
+        <TextView
+            android:id="@+id/txtShowPartno"
+            style="@style/style_text_disable_default"
+            android:layout_marginTop="10dp"
+
+            android:hint="Partno"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowPartNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblShowPartNo" />
+
+        <TextView
+            android:id="@+id/lblShowPartDesc"
+            style="@style/style_label_default"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:text="Desc:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowPartNo" />
+
+        <TextView
+            android:id="@+id/txtShowPartdesc"
+            style="@style/style_text_disable_default"
+            android:layout_marginStart="25dp"
+            android:hint="Description"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowPartDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@+id/lblShowPartDesc" />
+
+        <TextView
+            android:id="@+id/lblShowPackQty"
+            style="@style/style_label_default"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Pack Qty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowPartdesc" />
+
+        <TextView
+            android:id="@+id/lblShowWHCode"
+            style="@style/style_label_default"
+            android:layout_marginStart="10dp"
+            android:text="Warehouse"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowPackQty"
+            app:layout_constraintStart_toEndOf="@+id/lblShowPackQty" />
+
+        <TextView
+            android:id="@+id/lblShowLCCode"
+            style="@style/style_label_default"
+            android:layout_marginStart="10dp"
+            android:text="Location"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowPackQty"
+            app:layout_constraintStart_toEndOf="@+id/lblShowWHCode" />
+
+        <TextView
+            android:id="@+id/txtShowPackQty"
+            style="@style/style_label_default"
+
+            android:layout_marginTop="5dp"
+            android:hint="Pack Qty"
+            app:layout_constraintEnd_toEndOf="@+id/lblShowPackQty"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/lblShowPackQty"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowPackQty" />
+
+        <TextView
+            android:id="@+id/txtShowWHCode"
+            style="@style/style_label_default"
+            android:hint="WHCode"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowPackQty"
+            app:layout_constraintEnd_toEndOf="@+id/lblShowWHCode"
+            app:layout_constraintStart_toStartOf="@+id/lblShowWHCode" />
+
+        <TextView
+            android:id="@+id/txtShowLCCode"
+            style="@style/style_label_default"
+
+            android:hint="LCCode"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowPackQty"
+            app:layout_constraintEnd_toEndOf="@+id/lblShowLCCode"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="@+id/lblShowLCCode" />
+
+
+        <TextView
+            android:id="@+id/lblShowCountQty"
+            style="@style/style_label_default"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Qty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowCountDF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowScanQty" />
+
+        <TextView
+            android:id="@+id/lblShowCountSDM"
+            style="@style/style_label_default"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="Scrap"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowCountQty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowCountDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowCountDF" />
+
+        <TextView
+            android:id="@+id/lblShowCountDF"
+            style="@style/style_label_default"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="Defect"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowCountQty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowCountSDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowCountQty" />
+
+        <TextView
+            android:id="@+id/lblShowCountDM"
+            style="@style/style_label_default"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="DM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowCountQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowCountSDM" />
+
+        <TextView
+            android:id="@+id/txtShowCountQty"
+            style="@style/style_label_number"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+
+            android:hint="0"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowCountDF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowCountQty" />
+
+        <TextView
+            android:id="@+id/txtShowCountDF"
+            style="@style/style_label_number"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowCountQty"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowCountSDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowCountQty" />
+
+        <TextView
+            android:id="@+id/txtShowCountDM"
+            style="@style/style_label_number"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowCountQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowCountSDM" />
+
+        <TextView
+            android:id="@+id/txtShowCountSDM"
+            style="@style/style_label_number"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowCountQty"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowCountDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowCountDF" />
+
+        <TextView
+            android:id="@+id/lblShowScanQty"
+            style="@style/style_label_default"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:text="Scan Qty >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etScanCountPartnid" />
+
+        <TextView
+            android:id="@+id/txtShowScanQty"
+            android:layout_width="81dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="2dp"
+            style="@style/style_label_number"
+            android:hint="ScanQty"
+            android:text="0"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowScanQty"
+            app:layout_constraintStart_toEndOf="@+id/lblShowScanQty" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIncQty"
+            style="@style/style_button_inc_dec"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:drawableBottom="@drawable/ic_arrow_up"
+
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowScanQty"
+            app:layout_constraintStart_toEndOf="@+id/txtShowScanQty" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDecQty"
+            style="@style/style_button_inc_dec"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:drawableBottom="@drawable/ic_arrow_down"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnIncQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnIncQty" />
+
+
+        <TextView
+            android:id="@+id/tvBinCard"
+            style="@style/style_title_top"
+            android:layout_marginTop="30dp"
+
+            android:clickable="false"
+            android:text="Input Bincard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblShowBincardQty"
+            style="@style/style_label_default"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Qty >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBinCard" />
+
+
+        <EditText
+            android:id="@+id/txtInputBincardQty"
+            style="@style/style_textinput_interger"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowBincardQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toEndOf="@+id/lblShowBincardQty" />
+
+
+        <TextView
+            android:id="@+id/lblShowBincardDF"
+            style="@style/style_label_default"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:text="Defect >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowBincardQty" />
+
+        <EditText
+            android:id="@+id/txtInputBincardDF"
+            style="@style/style_textinput_interger"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowBincardDF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lblShowBincardDF" />
+
+        <TextView
+            android:id="@+id/lblShowBincardSDM"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:text="Scrap >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowBincardDF" />
+
+
+        <EditText
+            android:id="@+id/txtInputBincardSDM"
+            style="@style/style_textinput_interger"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowBincardSDM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toEndOf="@+id/lblShowBincardSDM" />
+
+        <TextView
+            android:id="@+id/lblShowBincardDM"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:text="Damage >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowBincardSDM" />
+
+
+        <EditText
+            android:id="@+id/txtInputBincardDM"
+            style="@style/style_textinput_interger"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowBincardDM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toEndOf="@+id/lblShowBincardDM" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelectPart"
+            style="@style/style_button_blue"
+            android:text="SELECT PART"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- Frame1 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpSelectLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="txtLocation,etScanLocation,spnLocation,txtGenno,spnWeekno,spnIssuePeriod,spnGenno,txtIssuePeriod,txtWeekno"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="723dp" />
+
+        <!-- frame 2 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpSelectPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="lvPartnid,txtListPart"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <!-- frame 3 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpCountPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="txtShowCountSDM,txtScanCountPartNid,txtShowWHCode,txtShowCountQty,lblShowPartDesc,lblShowCountQty,txtShowPartno,lblShowPartnid,lblShowLCCode,txtShowScanQty,txtShowCountDM,txtShowPackQty,txtShowPartnid,lblShowCountSDM,txtShowLCCode,lblShowScanQty,lblShowWHCode,lblShowCountDF,txtShowPartdesc,lblShowPackQty,etScanCountPartnid,lblShowPartNo,txtShowCountDF,lblShowCountDM,btnHold_Part"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <!-- frame 4 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpInputBincard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="txtInputBincardDM,lblShowBincardDM,tvBinCard,lblShowBincardQty,txtInputBincardQty,lblShowBincardDF,txtInputBincardDF,lblShowBincardSDM,txtInputBincardSDM"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+        <!-- frame 4.1 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpButtonIncDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="btnIncQty,btnDecQty" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

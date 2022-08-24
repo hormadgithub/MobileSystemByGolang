@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DeliveryActivity">
+
+    <TextView
+        android:id="@+id/tvTitleDelivery"
+        style="@style/style_title_top"
+        android:layout_width="0dp"
+
+        android:text="จ่ายสินค้า"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        style="@style/style_imgBackTop"
+        android:id="@+id/imgBackTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="visible"
+
+        app:layout_constraintStart_toStartOf="@id/tvTitleDelivery"
+        app:layout_constraintTop_toTopOf="@id/tvTitleDelivery">
+
+
+        <EditText
+            android:id="@+id/etScanSerialno"
+            style="@style/style_text_default"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:hint="Scan Serialno"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblSerialno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toEndOf="@+id/lblSerialno" />
+
+        <TextView
+            android:id="@+id/lblSerialno"
+            style="@style/style_label_default"
+            android:nextFocusDown='@id/etScanReceiveCode'
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Serialno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etShowStaffDelivery" />
+
+        <EditText
+            android:id="@+id/etScanReceiveCode"
+            style="@style/style_text_default"
+            android:layout_width="119dp"
+            android:layout_height="31dp"
+            android:hint="Receive by"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblReceiveCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/lblReceiveCode" />
+
+        <EditText
+            android:id="@+id/etShowStaffReceive"
+            style="@style/style_text_disable_default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="พนักงานที่รับสินคัา"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintBottom_toTopOf="@+id/btnDelivery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblReceiveCode"
+            style="@style/style_label_default"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="พนักงานที่รับสินคัา"
+            app:layout_constraintBottom_toTopOf="@+id/etShowStaffReceive"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelivery"
+            style="@style/style_button_blue"
+            android:layout_width="119dp"
+            android:layout_height="32dp"
+            android:text="@string/delivery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etSelectDocno"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:hint="Docno"
+            app:layout_constraintEnd_toEndOf="@+id/etScanDocument"
+            app:layout_constraintTop_toBottomOf="@+id/etScanDocument" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+
+            android:src="@drawable/ic_search_blue"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toEndOf="@+id/etScanDocument"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etShowStaffDelivery"
+            style="@style/style_text_disable_default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="พนักงานที่ตรวจสอบสินค้า"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblDeliveryCode" />
+
+        <TextView
+            android:id="@+id/lblDeliveryCode"
+            style="@style/style_label_default"
+
+            android:layout_marginStart="10dp"
+            android:text="พนักงานจ่ายสินค้า"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDocSelected" />
+
+        <EditText
+            android:id="@+id/etScanDocument"
+            style="@style/style_text_default"
+
+            android:layout_width="162dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:hint="Document"
+            android:nextFocusDown='@id/etScanReceiveCode'
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanDocument"
+            app:layout_constraintStart_toEndOf="@+id/lblScanDocument" />
+
+        <TextView
+            android:id="@+id/lblScanDocument"
+            style="@style/style_label_default"
+            android:layout_marginTop="45dp"
+            android:text="Scan :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvShowDocSelected"
+            style="@style/style_title_middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:hint="กรุณา Scan หรือ Search "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSelectDocno" />
+
+
+        <ListView
+            android:id="@+id/lvListDocument"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:divider="@color/blue_200"
+            android:dividerHeight="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDocSelected" />
+
+        <ListView
+            android:id="@+id/lvListSerialno"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:divider="@color/blue_200"
+            android:dividerHeight="1dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etScanSerialno" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpStaffDeliery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="lblDeliveryCode,etShowStaffDelivery"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpStaffReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="btnDelivery,etShowStaffReceive,lblReceiveCode,etScanReceiveCode"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gplvListDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="lvListDocument"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpSerialno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="lblSerialno,etScanSerialno,lvListSerialno"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

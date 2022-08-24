@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="cardview_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/abril_fatface</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="cardview_image_style">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="style_button_default">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_default_background</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="paddingBottomNoButtons">1dp</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_button_blue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/custom_button_blue_state</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="paddingBottomNoButtons">1dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+
+    <style name="style_button_inc_dec">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/custom_button_inc_dec_state</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="paddingBottomNoButtons">1dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_title_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/title_top_background</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/h1</item>
+    </style>
+
+    <style name="style_title_middle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/title_middle_background</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_label_default">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="style_label_number">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/custom_label_state</item>
+    </style>
+
+    <style name="style_label_number_diable">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/custom_label_state</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <style name="style_label_close">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:gravity">left</item>
+            <item name="android:paddingLeft">10dp</item>
+            <item name="android:background">@drawable/title_top_background</item>
+            <item name="android:fontFamily">@font/baloo</item>
+            <item name="android:textColor">@color/colorWhite</item>
+            <item name="android:textSize">@dimen/lblback</item>
+        </style>
+
+    <style name="style_text_default">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:background">@drawable/custom_input_default</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_text_disable_default">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:background">@drawable/custom_textinput_state</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h3</item>
+        <item name="android:enabled">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="style_text_itemlistview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_text_itemlistviewPart">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="style_imgBackTop">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="style_textinput_interger">
+        <item name="android:layout_width">99dp</item>
+        <item name="android:layout_height">49dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:inputType">number</item>
+        <item name="android:hint">0</item>
+        <item name="android:paddingRight">5dp</item>
+
+    </style>
+
+    <style name="style_radionbutton"
+        parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorControlNormal">@color/orange_700</item>
+        <item name="colorControlActivated">@color/blue_700</item>
+    </style>
+
+
+</resources>

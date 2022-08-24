@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="orange_50">#FBC02D</color>
+    <color name="orange_200">#FBC02D</color>
+    <color name="orange_500">#FFA000</color>
+    <color name="orange_700">#F57C00</color>
+
+    <color name="blue_10">#B4DDF3</color>
+    <color name="blue_100">#0288D1</color>
+    <color name="blue_200">#1976D2</color>
+    <color name="blue_500">#1976D2</color>
+    <color name="blue_700">#1674D1</color>
+
+    <color name="gray_100">#D4D8DA</color>
+    <color name="gray_200">#AEB0B3</color>
+    <color name="gray_500">#7C7E80</color>
+    <color name="gray_700">#545657</color>
+
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- Alert Dialog. -->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#005748</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorSuccess">#4BB543</color>
+    <color name="colorWarning">#FFCC00</color>
+    <color name="colorNeutral">#434343</color>
+    <color name="colorError">#CC0000</color>
+    <color name="colorTextPrimary">#212121</color>
+
+    <!-- Menu -->
+    <color name="color_MenuHome_Default">#000000</color>
+    <color name="color_MenuHome_Selected">@color/orange_700</color>
+
+    <color name="color_MenuSummary_Default">#000000</color>
+    <color name="color_MenuSummary_Selected">@color/orange_700</color>
+    <!-- Cardview -->
+    <color name="color_Cardview_Default">@color/colorWhite</color>
+    <color name="color_Cardview_Selected">@color/orange_700</color>
+
+    <!-- Splash -->
+    <color name="purple">#ba53de</color>
+    <color name="pink">#f469a9</color>
+    <color name="blue">#88bef5</color>
+
+
+</resources>

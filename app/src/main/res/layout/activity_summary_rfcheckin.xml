@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Summary.SummaryRFCheckInActivity">
+
+
+     <TextView
+         android:id="@+id/tvTitleSummaryRFCheckIn"
+         style="@style/style_title_top"
+         android:layout_width="0dp"
+
+         android:text="Work Store Summary"
+         android:textSize="@dimen/h2"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <ImageView
+         style="@style/style_imgBackTop"
+         android:id="@+id/imgBackTop"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/ConstraintLayoutMain"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="10dp"
+         android:visibility="visible"
+
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="@id/tvTitleSummaryRFCheckIn"
+         tools:layout_editor_absoluteY="-346dp">
+
+          <Spinner
+              android:id="@+id/spnWorktype"
+              android:layout_width="0dp"
+              android:layout_height="28dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="10dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/lblWorktype"
+              app:layout_constraintTop_toBottomOf="@+id/lblFromDate" />
+
+          <TextView
+              android:id="@+id/lblWorktype"
+              style="@style/style_label_default"
+
+              android:layout_width="wrap_content"
+              android:layout_height="31dp"
+              android:layout_marginTop="10dp"
+              android:text="ประเเภทงาน :"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/lblFromDate" />
+
+          <RadioGroup
+              android:id="@+id/radioGroupSummaryOption"
+              android:layout_width="0dp"
+              android:layout_height="36dp"
+              android:layout_gravity="center"
+              android:layout_marginTop="35dp"
+              android:background="@drawable/custom_listview_state"
+              android:orientation='horizontal'
+              android:paddingLeft="30dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.157"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+               <RadioButton
+                   android:id="@+id/radBtnDay"
+                   android:layout_width="100dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="left"
+                   android:text="Day" />
+
+               <RadioButton
+                   android:id="@+id/radBtnMonth"
+                   android:layout_width="100dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="left"
+                   android:text="Month" />
+
+               <RadioButton
+                   android:id="@+id/radBtnYear"
+                   android:layout_width="100dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="left"
+                   android:text="Year" />
+          </RadioGroup>
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/btnConfirm_SummaryRFCheckIn"
+              style="@style/style_button_blue"
+              android:layout_width="48dp"
+              android:layout_height="32dp"
+              android:text="@string/ok"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/spnStoreEmplyee" />
+
+          <TextView
+              android:id="@+id/tvToDate"
+              android:layout_width="0dp"
+              android:layout_height="31dp"
+              android:layout_marginStart="10dp"
+              android:text="ToDate"
+              app:layout_constraintBaseline_toBaselineOf="@+id/lblFromDate"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.1"
+              app:layout_constraintStart_toEndOf="@+id/lblToDate" />
+
+          <TextView
+              android:id="@+id/lblFromDate"
+              style="@style/style_label_default"
+
+              android:layout_width="wrap_content"
+              android:layout_height="31dp"
+              android:layout_marginTop="10dp"
+              android:text="From :"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/radioGroupSummaryOption" />
+
+          <TextView
+              android:id="@+id/tvFromDate"
+              android:layout_width="wrap_content"
+              android:layout_height="31dp"
+              android:layout_marginStart="8dp"
+              android:text="FromDate"
+              app:layout_constraintBaseline_toBaselineOf="@+id/lblFromDate"
+              app:layout_constraintStart_toEndOf="@+id/lblFromDate" />
+
+          <TextView
+              android:id="@+id/lblToDate"
+              style="@style/style_label_default"
+
+              android:layout_width="0dp"
+              android:layout_height="31dp"
+              android:layout_marginStart="8dp"
+              android:text="To"
+              app:layout_constraintBaseline_toBaselineOf="@+id/lblFromDate"
+              app:layout_constraintStart_toEndOf="@+id/tvFromDate" />
+
+          <Spinner
+              android:id="@+id/spnStoreEmplyee"
+              android:layout_width="0dp"
+              android:layout_height="29dp"
+              android:layout_marginTop="10dp"
+              app:layout_constraintEnd_toStartOf="@+id/btnConfirm_SummaryRFCheckIn"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/lblWorktype" />
+
+          <com.github.mikephil.charting.charts.PieChart
+              android:id="@+id/pcSummaryRFCheckIn"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/spnStoreEmplyee"
+              tools:layout_editor_absoluteX="10dp" />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

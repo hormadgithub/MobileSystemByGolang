@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Version English -->
+    <string name="app_name">Mobile Store System GoLaung</string>
+
+    <!-- Button -->
+    <string name="login">Login</string>
+    <string name="close">Close</string>
+    <string name="search">Search...</string>
+    <string name="refresh">Refresh</string>
+    <string name="confirm">Confirm</string>
+    <string name="complete">Complete</string>
+    <string name="delivery">Delivery</string>
+    <string name="show">Show</string>
+    <string name="ok">OK</string>
+
+    <string name="back">Back</string>
+    <string name="select">Select</string>
+    <string name="reset">Reset</string>
+    <string name="reset_item">Reset Item</string>
+    <string name="hold">Hold</string>
+
+
+    <!-- Start Alert Dialog -->
+    <string name="alertdialog_success">Success</string>
+    <string name="alertdialog_warning">Warning</string>
+    <string name="alertdialog_error">Error</string>
+    <string name="alertdialog_success_title">This is success title</string>
+    <string name="alertdialog_warning_title">This is Warning title</string>
+    <string name="alertdialog_error_title">This is Error title</string>
+
+    <string name="alertdialog_dummy_text">Pneumax co.,Ltd.</string>
+    <string name="alertdialog_okay">Okay</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="notfounddata">Not found data</string>
+    <string name="notfounddocument">Not found document</string>
+    <string name="notfoundreceivecode">Not found receive code</string>
+    <string name="confirmcorrect">ยืนยันตวามถูกต้อง</string>
+
+
+    <!-- End Alert Dialog -->
+
+    <!-- Start Menu -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- End Menu -->
+
+
+</resources>

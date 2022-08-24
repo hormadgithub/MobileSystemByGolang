@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReceiveDoctypeActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/style_title_top"
+        android:layout_width="0dp"
+
+        android:text="รับสินค้า"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        style="@style/style_imgBackTop"
+        android:id="@+id/imgBackTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHold_Part"
+            style="@style/style_button_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/hold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfirmReceivePart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnReset_Part" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset_Part"
+            style="@style/style_button_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnHold_Part"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveLocation"
+            style="@style/style_label_number_diable"
+            android:layout_width="71dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="LCCode"
+            app:layout_constraintStart_toEndOf="@+id/lblShowReceiveLocation"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowReceivePartno" />
+
+        <TextView
+            android:id="@+id/lblShowReceiveLocation"
+            style="@style/style_label_default"
+            android:layout_width="70dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowReceivePartno" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirmReceivePart"
+            style="@style/style_button_blue"
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:text="@string/confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnHold_Part" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDecReceiveQty"
+            style="@style/style_button_inc_dec"
+            android:layout_width="44dp"
+            android:layout_height="22dp"
+            android:drawableBottom="@drawable/ic_arrow_down"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowScanReceiveQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnIncReceiveQty" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIncReceiveQty"
+            style="@style/style_button_inc_dec"
+            android:layout_width="44dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+
+            android:drawableBottom="@drawable/ic_arrow_up"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowScanReceiveQty"
+            app:layout_constraintStart_toEndOf="@+id/txtShowScanReceiveQty" />
+
+        <TextView
+            android:id="@+id/txtShowScanReceiveQty"
+            android:layout_width="82dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="4dp"
+            android:hint="ScanQty"
+            android:text="0"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowScanReceiveQty"
+            app:layout_constraintStart_toEndOf="@+id/lblShowScanReceiveQty" />
+
+        <TextView
+            android:id="@+id/lblShowScanReceiveQty"
+            style="@style/style_label_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Scan Qty >>"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtScanInputReceivePart" />
+
+        <TextView
+            android:id="@+id/txtShowReceivePartno"
+            style="@style/style_label_default"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="Partno"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDocSelected" />
+
+        <EditText
+            android:id="@+id/txtScanInputReceivePart"
+            style="@style/style_text_default"
+            android:layout_width="201dp"
+            android:layout_height="26dp"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:hint="Scan Partid"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtInputPart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtInputPart" />
+
+        <TextView
+            android:id="@+id/txtInputPart"
+            style="@style/style_label_default"
+            android:layout_width="71dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Scan :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowReceiveLocation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHold_Document"
+            style="@style/style_button_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/hold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnReset_Document" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset_Document"
+            style="@style/style_button_blue"
+            android:layout_height="32dp"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnHold_Document"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/etSelectDocno"
+            style="@style/style_text_disable_default"
+
+            android:layout_width="169dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="2dp"
+            android:hint="Docno"
+            app:layout_constraintEnd_toEndOf="@+id/etScanDocument"
+            app:layout_constraintTop_toBottomOf="@+id/etScanDocument" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_search_blue"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toEndOf="@+id/etScanDocument"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etScanDocument"
+            style="@style/style_text_default"
+            android:layout_width="168dp"
+            android:nextFocusDown='@id/txtScanInputReceivePart'
+            android:layout_height="36dp"
+            android:hint="Document"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblScanDocument"
+            app:layout_constraintStart_toEndOf="@+id/lblScanDocument" />
+
+        <TextView
+            android:id="@+id/lblScanDocument"
+            style="@style/style_label_default"
+            android:layout_marginTop="45dp"
+            android:text="Scan :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/lblShowReceiveQtyIn"
+            style="@style/style_label_number"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveDFIn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowReceiveQty" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveDF"
+            style="@style/style_label_number_diable"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowReceiveQty"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveSDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowReceiveQty" />
+
+        <TextView
+            android:id="@+id/lblShowReceiveDM"
+            style="@style/style_label_default"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="DM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowReceiveSDM" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveQty"
+            style="@style/style_label_number_diable"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveDF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblShowReceiveQty" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveDFIn"
+            style="@style/style_label_number"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQtyIn"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveSDMIn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowReceiveQtyIn" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveSDMIn"
+            style="@style/style_label_number"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQtyIn"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveDMIn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowReceiveDFIn" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveSDM"
+            style="@style/style_label_number_diable"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowReceiveQty"
+            app:layout_constraintEnd_toStartOf="@+id/txtShowReceiveDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowReceiveDF" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveDMIn"
+            style="@style/style_label_number"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQtyIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowReceiveSDMIn" />
+
+        <TextView
+            android:id="@+id/lblShowReceiveQty"
+            style="@style/style_label_default"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Qty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowReceiveDF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShowScanReceiveQty" />
+
+        <TextView
+            android:id="@+id/txtShowReceiveDM"
+            style="@style/style_label_number_diable"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtShowReceiveQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtShowReceiveSDM" />
+
+        <TextView
+            android:id="@+id/lblShowReceiveDF"
+            style="@style/style_label_default"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="Defect"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowReceiveSDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowReceiveQty" />
+
+        <TextView
+            android:id="@+id/lblShowReceiveSDM"
+            style="@style/style_label_default"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:text="Scrap"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblShowReceiveQty"
+            app:layout_constraintEnd_toStartOf="@+id/lblShowReceiveDM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblShowReceiveDF" />
+
+        <TextView
+            android:id="@+id/tvShowDocSelected"
+            style="@style/style_title_middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:hint="กรุณา Scan หรือ Search "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSelectDocno" />
+
+
+        <!-- Frame 1 -->
+
+        <ListView
+            android:id="@+id/lvListDocument"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:divider="@color/blue_200"
+            android:dividerHeight="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDocSelected"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <ListView
+            android:id="@+id/lvListPart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:divider="@color/blue_200"
+            android:dividerHeight="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnReset_Document"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDocSelected" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gplvListDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="lvListDocument"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+        <!-- Frame 2 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpLocation"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:constraint_referenced_ids="btnHold_Document,btnReset_Document,lvListPart"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+        <!-- Frame 3 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpScanReceivePart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="txtInputPart,txtScanInputReceivePart,txtShowReceivePartno,lblShowReceiveLocation,txtShowReceiveLocation,lblShowScanReceiveQty,txtShowScanReceiveQty,lblShowReceiveQtyIn,txtShowReceiveDF,lblShowReceiveDM,txtShowReceiveQty,txtShowReceiveDFIn,txtShowReceiveSDMIn,txtShowReceiveSDM,txtShowReceiveDMIn,lblShowReceiveQty,txtShowReceiveDM,lblShowReceiveDF,lblShowReceiveSDM,btnReset_Part,btnHold_Part,btnConfirmReceivePart"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <!-- Frame 3-1 -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpButtonIncDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="btnIncReceiveQty,btnDecReceiveQty"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

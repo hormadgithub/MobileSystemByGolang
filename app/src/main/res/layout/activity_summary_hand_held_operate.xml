@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Summary.SummaryHandHeldOperate">
+
+
+<TextView
+    android:id="@+id/tvTitleSummaryHandHeldOperate"
+    style="@style/style_title_top"
+    android:layout_width="0dp"
+
+    android:text="Hand Held Opeation"
+    android:textSize="@dimen/h2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+    style="@style/style_imgBackTop"
+    android:id="@+id/imgBackTop"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ConstraintLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:visibility="visible"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@id/tvTitleSummaryHandHeldOperate"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/tvToDate"
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:text="ToDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblToDate"
+        app:layout_constraintStart_toEndOf="@+id/lblToDate" />
+
+    <TextView
+        android:id="@+id/tvFromDate"
+        android:layout_width="188dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:text="FromDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblFromDate"
+        app:layout_constraintStart_toEndOf="@+id/lblFromDate" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSummaryHandHeldOperate"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/custom_listview_state"
+        android:orientation='horizontal'
+        android:paddingLeft="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radBtnDay"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:text="Day" />
+
+        <RadioButton
+            android:id="@+id/radBtnMonth"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:text="Month" />
+
+        <RadioButton
+            android:id="@+id/radBtnYear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:text="Year" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm_SummaryHandHeldOperate"
+        style="@style/style_button_blue"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblToDate" />
+
+
+    <TextView
+        android:id="@+id/lblFromDate"
+        style="@style/style_label_default"
+
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="From :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSummaryHandHeldOperate" />
+
+
+    <TextView
+        android:id="@+id/lblToDate"
+        style="@style/style_label_default"
+
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="To:"
+        app:layout_constraintStart_toStartOf="@+id/lblFromDate"
+        app:layout_constraintTop_toBottomOf="@+id/lblFromDate" />
+
+    <Spinner
+        android:id="@+id/spnDeviceName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirm_SummaryHandHeldOperate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblToDate" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bcSummaryHandHeldOperate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnDeviceName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp">
+
+<!--        <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--            android:id="@+id/iconLogin"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:src="@drawable/ic_user_password"-->
+<!--            app:civ_border_color="@color/gray_200"-->
+<!--            app:civ_border_width="2dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <ImageView
+            android:id="@+id/iconLogin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_user_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_textinput_state"
+
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/baloo"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textColor="@color/orange_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconLogin" />
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_textinput_state"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/baloo"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/orange_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="117dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="80dp"
+
+            android:background="@drawable/custom_button_state"
+            android:text="@string/login"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_listview_state"
+            android:paddingLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/radBtnDataTest"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="left"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="DataTest" />
+
+            <RadioButton
+                android:id="@+id/radBtnAnalysisDB"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="AnalysisDB" />
+
+            <RadioButton
+                android:id="@+id/radBtnPneumaxDB"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="PneumaxDB" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/lblSelectDatabase"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@color/orange_700"
+            android:padding="5dp"
+            android:text="Select Database"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCurrentVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Version Golaung(210622:12:00)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <CheckBox
+            android:id="@+id/chkSelectServer"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Test Program"
+            android:textSize="16dp"
+            android:textColor="@color/orange_700"
+            app:layout_constraintBottom_toTopOf="@+id/lblSelectDatabase"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpSelectDatabase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="lblSelectDatabase,radioGroup,chkSelectServer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

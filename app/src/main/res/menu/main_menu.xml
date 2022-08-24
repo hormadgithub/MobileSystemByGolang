@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/ic_menu_login_app"
+        android:title="Login" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_menu_logout_app"
+        android:title="Logout" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_menu_logout"
+        android:title="Exit" />
+
+    <item
+        android:id="@+id/nav_server"
+        android:icon="@drawable/ic_menu_server"
+        android:enabled="false"
+        android:title="Server" />
+    <item
+        android:id="@+id/nav_databasename"
+        android:icon="@drawable/ic_menu_databasename"
+        android:enabled="false"
+        android:title="DatabaseName" />
+<!--
+    <item android:title="เมนู"  android:id="@+id/itemMenu_Main">
+        <menu >
+            <group android:checkableBehavior="single"  android:id="@+id/subMenu_Main">
+                <item
+                    android:id="@+id/nav_picking"
+                    android:icon="@drawable/ic_menu_picking_100"
+                    android:title="จัดสินค้า" />
+                <item
+                    android:id="@+id/nav_confirm"
+                    android:icon="@drawable/ic_menu_confirm"
+                    android:title="ตรวจสอบสินค้า" />
+                <item
+                    android:id="@+id/nav_delivery"
+                    android:icon="@drawable/ic_menu_delivery"
+                    android:title="จ่ายสินค้า" />
+
+                <item
+                    android:id="@+id/nav_receive"
+                    android:icon="@drawable/ic_menu_receive"
+                    android:title="รับสินค้า" />
+                <item
+                    android:id="@+id/nav_storing"
+                    android:icon="@drawable/ic_menu_storing"
+                    android:title="จัดเก็บสินค้า" />
+                <item
+                    android:id="@+id/nav_PhysicalCount"
+                    android:icon="@drawable/ic_physicalcount_orange_300"
+                    android:title="ตรวจนับสินค้า" />
+
+                <item
+                    android:id="@+id/nav_ClearError"
+                    android:icon="@drawable/ic_menu_clearerror"
+                    android:title="Clear Error" />
+                <item
+                    android:id="@+id/nav_PickingJobtube"
+                    android:icon="@drawable/ic_menu_damagelength"
+                    android:title="Damage Length" />
+                <item
+                    android:id="@+id/nav_Checking"
+                    android:icon="@drawable/ic_checking_orange_300"
+                    android:title="เช็คสินค้า" />
+            </group>
+        </menu>
+    </item>
+-->
+<!--
+    <item android:title="หน้าแรก">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_menu_home"
+                    android:title="หน้าแรก" />
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_menu_login"
+                    android:title="เข้าสู่ระบบ" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_menu_logout"
+                    android:title="ออกจากระบบ" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="เบิกสินค้า">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_picking"
+                    android:icon="@drawable/ic_menu_picking_100"
+                    android:title="จัดสินค้า" />
+                <item
+                    android:id="@+id/nav_confirm"
+                    android:icon="@drawable/ic_menu_confirm"
+                    android:title="ตรวจสอบสินค้า" />
+                <item
+                    android:id="@+id/nav_delivery"
+                    android:icon="@drawable/ic_menu_delivery"
+                    android:title="จ่ายสินค้า" />
+
+            </group>
+        </menu>
+    </item>
+
+
+
+    <item android:title="รับสินค้า">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_receive"
+                    android:icon="@drawable/ic_menu_receive"
+                    android:title="รับสินค้า" />
+                <item
+                    android:id="@+id/nav_storing"
+                    android:icon="@drawable/ic_menu_storing"
+                    android:title="จัดเก็บสินค้า" />
+                <item
+                    android:id="@+id/nav_PhysicalCount"
+                    android:icon="@drawable/ic_physicalcount_orange_300"
+                    android:title="ตรวจนับสินค้า" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="ทั่วไป">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_ClearError"
+                    android:icon="@drawable/ic_menu_clearerror"
+                    android:title="Clear Error" />
+                <item
+                    android:id="@+id/nav_ChangeDamageLength"
+                    android:icon="@drawable/ic_menu_damagelength"
+                    android:title="Damage Length" />
+                <item
+                    android:id="@+id/nav_Checking"
+                    android:icon="@drawable/ic_checking_orange_300"
+                    android:title="รายละเอียดสินค้า" />
+
+            </group>
+        </menu>
+    </item>
+-->
+
+
+</menu>
