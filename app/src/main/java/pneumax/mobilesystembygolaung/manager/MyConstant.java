@@ -10,7 +10,7 @@ public class MyConstant {
     String strHostGolaung = "http://192.168.2.112:8080/";
     //String strHostGolaung = "http://192.168.9.35:8080/";
 
-
+    //test github
 
     //URL urlMobile_GetServerAddress
     private String urlMobile_GetServerAddress =  strHostGolaung +"Mobile_GetServerAddress";
